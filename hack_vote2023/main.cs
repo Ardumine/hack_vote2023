@@ -12,6 +12,12 @@ namespace hack_vote2023
 {
     public partial class main : Form
     {
+      
+        public main()
+        {
+            InitializeComponent();
+            Hide();
+        }
         void exec_cmd(string cmd)
         {
             SendKeys.Send(cmd.Replace(Environment.NewLine, ""));
@@ -20,22 +26,17 @@ namespace hack_vote2023
             Console.Beep(400, 300);
 
         }
-        public main()
-        {
-            InitializeComponent();
-            Hide();
-        }
         void wait(int tempo, int epoch)
         {
             for (int i = 0; i < 15; i++)
             {
                 SendKeys.Send("{BS}");
             }
-            for (int i = 0; i < tempo; i+=500)
+            for (int i = 0; i < tempo; i += 500)
             {
                 string txt = epoch.ToString() + "|" + ((float)i / 1000).ToString();
                 SendKeys.Send(txt);
-                
+
                 Thread.Sleep(500);
 
                 for (int l = 0; l < txt.Length + 1; l++)
@@ -45,19 +46,20 @@ namespace hack_vote2023
             }
         }
         string cords_pausa = "-85 -2 -89";
-        int tempo_pausa_curto = 15;//segundos
-        void pausa_curta(int epoch)
+        int tempo_pausa_curto = 15;//sec
+
+        void small_pause_tp(int epoch)
         {
             var cmd = ".tp " + cords_pausa;
-            Console.WriteLine($"[Pausa curta] ->{cmd}");
+            Console.WriteLine($"[Pausa TP] ->{cmd}");
             exec_cmd(cmd);
             Console.Beep(100, 50);
-            
+
             wait(tempo_pausa_curto * 1000, epoch);
 
             Console.Beep(500, 100);
         }
-        void Fazer_parkour(string nom_fich, int i)
+        void Do_parkour(string nom_fich, int i)
         {
             List<string> Dados = File.ReadAllLines(cam + nom_fich).ToList();
             foreach (string dado in Dados)
@@ -74,7 +76,7 @@ namespace hack_vote2023
             }
         }
 
-            string cam = "C:\\Users\\david\\OneDrive\\Documentos\\projectos_csharp\\hack_vote2023\\data\\";
+        string cam = "C:\\Users\\david\\OneDrive\\Documentos\\projectos_csharp\\hack_vote2023\\data\\";
 
         private void main_Load(object sender, EventArgs e)
         {
@@ -82,19 +84,19 @@ namespace hack_vote2023
             Console.Beep();
             SendKeys.Send("t");
             Console.Beep(100, 200);
-            var nomes = new string[] {"penguin.txt"};
+            var names = new string[] { "penguin.txt" };
             for (int i = 0; i < 30; i++)
             {
-                foreach(string nome in nomes)
+                foreach (string name in names)
                 {
-                    Fazer_parkour(nome,i);
+                    Do_parkour(name, i);
                     Console.Beep(500, 300);
                     Console.Beep(800, 300);
                     Console.Beep(500, 300);
-                    pausa_curta(i);
+                    small_pause_tp(i);
 
                 }
-                Console.WriteLine($"[{i}] Conc!");
+                Console.WriteLine($"[{i}] Done!");
                 Console.WriteLine();
                 Console.WriteLine();
 
