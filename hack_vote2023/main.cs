@@ -23,7 +23,7 @@ namespace hack_vote2023
             SendKeys.Send(cmd.Replace(Environment.NewLine, ""));
             Console.Beep(200, 200);
             SendKeys.Send("{ENTER}");
-            Console.Beep(400, 300);
+            Console.Beep(100, 300);
 
         }
         void wait(int tempo, int epoch)
@@ -45,8 +45,8 @@ namespace hack_vote2023
                 }
             }
         }
-        string cords_pausa = "-85 -2 -89";
-        int tempo_pausa_curto = 25;//sec
+        string cords_pausa = "-7 -3 -59";
+        int tempo_pausa_curto = 10;//sec
 
         void small_pause_tp(int epoch)
         {
@@ -69,7 +69,7 @@ namespace hack_vote2023
                     var cmd = ".tp " + dado;
                     Console.WriteLine($"[{i}, {nom_fich}] ->{cmd}");
                     exec_cmd(cmd);
-                    Thread.Sleep(200);
+                    Thread.Sleep(400);
                 }
                 Console.WriteLine($"[{i}, {nom_fich}] Conc!");
 
