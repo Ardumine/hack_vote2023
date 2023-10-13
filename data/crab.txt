@@ -1,3 +1,7 @@
+!For the crab one
+! ! = comment
+! Made by Davida Dev
+! Eduction porpuses only(do not this im just dumb)
 -8 -1 -36
 !
 -26 -4 -53
