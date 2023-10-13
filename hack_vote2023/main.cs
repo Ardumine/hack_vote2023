@@ -12,7 +12,7 @@ namespace hack_vote2023
 {
     public partial class main : Form
     {
-      
+
         public main()
         {
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace hack_vote2023
             }
         }
         string cords_pausa = "-85 -2 -89";
-        int tempo_pausa_curto = 15;//sec
+        int tempo_pausa_curto = 25;//sec
 
         void small_pause_tp(int epoch)
         {
@@ -83,9 +83,9 @@ namespace hack_vote2023
             Thread.Sleep(4000);
             Console.Beep();
             SendKeys.Send("t");
-            Console.Beep(100, 200);
-            var names = new string[] { "penguin.txt" };
-            for (int i = 0; i < 30; i++)
+            Console.Beep(100, 200);//after pressing F5 to run
+            var names = new string[] { "penguin.txt" };//penguin gives more money and its completed in less time
+            for (int i = 0; i < 50; i++)
             {
                 foreach (string name in names)
                 {
