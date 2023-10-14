@@ -71,9 +71,10 @@ namespace hack_vote2023
                     exec_cmd(cmd);
                     Thread.Sleep(400);
                 }
-                Console.WriteLine($"[{i}, {nom_fich}] Conc!");
 
             }
+            Console.WriteLine($"[{i}, {nom_fich}] Conc!");
+
         }
 
         string cam = "C:\\Users\\david\\OneDrive\\Documentos\\projectos_csharp\\hack_vote2023\\data\\";
