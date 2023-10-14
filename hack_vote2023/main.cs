@@ -46,7 +46,7 @@ namespace hack_vote2023
             }
         }
         string cords_pausa = "-7 -3 -59";
-        int tempo_pausa_curto = 10;//sec
+        int tempo_pausa_curto = 15;//sec
 
         void small_pause_tp(int epoch)
         {
@@ -85,7 +85,7 @@ namespace hack_vote2023
             SendKeys.Send("t");
             Console.Beep(100, 200);//after pressing F5 to run
             var names = new string[] { "penguin.txt" };//penguin gives more money and its completed in less time
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 250; i++)
             {
                 foreach (string name in names)
                 {
