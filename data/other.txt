@@ -1,0 +1,7 @@
+!For the one in the cave idk the name
+! ! = comment
+! Made by Davida Dev
+! Eduction porpuses only(do not this im just dumb)
+54, -35, 100
+!
+67, -27, 110
