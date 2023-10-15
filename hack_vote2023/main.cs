@@ -21,9 +21,9 @@ namespace hack_vote2023
         void exec_cmd(string cmd)
         {
             SendKeys.Send(cmd.Replace(Environment.NewLine, ""));
-            Console.Beep(200, 200);
+            Console.Beep(200, 100);
             SendKeys.Send("{ENTER}");
-            Console.Beep(100, 300);
+            Console.Beep(400, 300);
 
         }
         void wait(int tempo, int epoch)
@@ -46,7 +46,7 @@ namespace hack_vote2023
             }
         }
         string cords_pausa = "-7 -3 -59";
-        int tempo_pausa_curto = 15;//sec
+        int tempo_pausa_curto = 5;//sec
 
         void small_pause_tp(int epoch)
         {
@@ -77,7 +77,7 @@ namespace hack_vote2023
 
         }
 
-        string cam = "C:\\Users\\david\\OneDrive\\Documentos\\projectos_csharp\\hack_vote2023\\data\\";
+        string cam = "..\\data\\";
 
         private void main_Load(object sender, EventArgs e)
         {
@@ -86,7 +86,7 @@ namespace hack_vote2023
             SendKeys.Send("t");
             Console.Beep(100, 200);//after pressing F5 to run
             var names = new string[] { "penguin.txt" };//penguin gives more money and its completed in less time
-            for (int i = 0; i < 250; i++)
+            for (int i = 0; i < 350; i++)
             {
                 foreach (string name in names)
                 {
